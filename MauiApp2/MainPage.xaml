@@ -2,20 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.MainPage">
-    <StackLayout BackgroundColor="MediumPurple" Margin="10">
+    <ScrollView>
+        <StackLayout BackgroundColor="MediumPurple" Margin="10">
 
-        <Label 
+            <Label x:Name="lbl_Year"
             Text="hello shira" TextColor="White" FontSize="70" FontFamily="OpenSansSemibold" HorizontalTextAlignment="Center">
-        </Label>
-        
-        <Image Aspect="AspectFit" HeightRequest="400" WidthRequest="500" Source="puppy1.jpg">
-                </Image>
+            </Label>
 
-            <Button Text="החלף טקסט" HeightRequest="60" WidthRequest="200" Margin="0,5,0,0" BorderWidth="2" BorderColor="White" CornerRadius="15"> 
-                
+            <Image x:Name="img_image" Aspect="AspectFit" HeightRequest="400" WidthRequest="500" Source="puppy1.jpg">
+            </Image>
+
+            <Button x:Name="btnChangeText" Clicked="ChangeText" IsEnabled="True" Text="החלף טקסט" HeightRequest="60" WidthRequest="200" Margin="0,5,0,0" BorderWidth="2" BorderColor="White" CornerRadius="15">
+
             </Button>
-        
-    </StackLayout>
-    
+            <StackLayout>
+                <Button x:Name="btnBackwards" Clicked="backwards" IsEnabled="True" Text="backwards" HeightRequest="60" WidthRequest="200" Margin="0,5,0,0" BorderWidth="2" BorderColor="White" CornerRadius="15" >
+
+                </Button>
+                <Image x:Name="monkeyImage" Aspect="AspectFit" HeightRequest="400" WidthRequest="500" Source="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg">
+
+                </Image>
+                <Button x:Name="btnForward" Clicked="forward" IsEnabled="True" Text="forward" HeightRequest="60" WidthRequest="200" Margin="0,5,0,0" BorderWidth="2" BorderColor="White" CornerRadius="15" >
+
+                </Button >
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+
 
 </ContentPage>
